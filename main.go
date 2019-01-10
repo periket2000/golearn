@@ -23,4 +23,11 @@ func main() {
 	//Using it with Go infering the pointer for us (see file.go)
 	f.updateName("whatever")
 	fmt.Println(f)
+
+	//add meta property
+	f.addMetadata("size", "800px")
+	fmt.Println(f);
+	var s = f.getMetadata("size")
+	fmt.Println(s)
+	fmt.Println(*s)
 }
